@@ -14,7 +14,8 @@ First install Spotipy via `pip`
 pip install spotipy
 ```
 
-Then install LyricsGenius via `pip`. `lyricsgenius` requires Python 3.
+Then install LyricsGenius via `pip`. 
+`lyricsgenius` requires Python 3.
 ```
 pip install lyricsgenius
 ```
