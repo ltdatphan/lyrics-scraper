@@ -23,12 +23,12 @@ You run the script using:
 python lyrics-scraper.py
 ```
 If you're running it for the first time, it will open a new browswer tab and prompt you to log in.
-Then you will need to grant access to your Spotify Data. 
+Then you will need to grant access to your Spotify Account. 
+After that just play any song on any device and then run the script. It will grab the lyrics for that specific song. 
+Enjoy :)
 
-### Disclaimer:
+# Disclaimer:
 This script only looks at your currently playing Spotify song and you can revoke its acess any time at spotify.com/account
 
-After that just play any song on any device and then run the script. It will grab the lyrics for that specific song. 
 
-Enjoy :)
 
