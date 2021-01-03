@@ -28,7 +28,7 @@ python lyrics-scraper.py
 ```
 If you're running it for the first time, it will open a new browswer tab and prompt you to log in.  
 Then you will need to grant access to your Spotify Account.   
-![image](https://user-images.githubusercontent.com/29266892/103489349-f64aa700-4de1-11eb-974b-fde64e3e782f.png)
+![image](https://user-images.githubusercontent.com/29266892/103489349-f64aa700-4de1-11eb-974b-fde64e3e782f.png)  
 After that just play any song on any device and then run the script. 
 It will grab the lyrics for currently playing song.  
 
