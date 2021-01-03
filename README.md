@@ -1,3 +1,6 @@
+# Introduction
+Tired of Spotify lack of support for lyrics (in Canada)? Look no further, the solution is here! :')
+
 # Lyrics Scraper 
 A simple python script that looks at the currently playing song on Spotify and tries to find the lyrics to that song.
 
@@ -28,7 +31,8 @@ After that just play any song on any device and then run the script. It will gra
 Enjoy :)
 
 # Disclaimer
-This script only looks at your currently playing Spotify song and you can revoke its acess any time at spotify.com/account
+- This script only looks at your currently playing Spotify song and you can revoke its acess any time at spotify.com/account.
+- This is a personal project and is not intended to be used commercially. 
 
 
 
