@@ -1,17 +1,19 @@
+#Config file
+import config
+
 #Spotipy import
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 #LyricGenius import + token key
 import lyricsgenius
-genius = lyricsgenius.Genius("9rE0-_BUl5O6VYVN3TTIh-cLVpEzpyguwEUF1JkMFwl-ESEpMv52LEy9ByqoY6jB")
+genius = lyricsgenius.Genius(config.genius_token)
 
 # OS Access for clearing output
 import os
-
 #Object creation with authentication
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="f7dfb79f6dea478b9f6be602b01a3ef2",
-                                               client_secret="2e8044ea5b44403c908425559644b711",
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=config.client_id,
+                                               client_secret=config.client_secret,
                                                redirect_uri="http://localhost:8888/callback",
                                                scope="user-read-playback-state"))
 
