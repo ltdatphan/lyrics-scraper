@@ -6,7 +6,7 @@ A simple python script that looks at the currently playing song on Spotify and t
 
 # Installation
 This project was made using [Spotipy](https://github.com/plamere/spotipy) and [LyricsGenius](https://github.com/johnwmillr/LyricsGenius)
-.Please refer to the project guides regarding installation requirements.
+.  Please refer to the project guides regarding installation requirements.
 
 #### Quick guide:
 First install Spotipy via `pip`
@@ -14,7 +14,7 @@ First install Spotipy via `pip`
 pip install spotipy
 ```
 
-Then install LyricsGenius via `pip`. 
+Then install LyricsGenius via `pip`.  
 `lyricsgenius` requires Python 3.
 ```
 pip install lyricsgenius
@@ -28,7 +28,7 @@ python lyrics-scraper.py
 ```
 If you're running it for the first time, it will open a new browswer tab and prompt you to log in.
 Then you will need to grant access to your Spotify Account. 
-After that just play any song on any device and then run the script. It will grab the lyrics for that specific song. 
+After that just play any song on any device and then run the script. It will grab the lyrics for that specific song.  
 Enjoy :)
 
 # Disclaimer
