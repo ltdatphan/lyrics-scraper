@@ -27,7 +27,7 @@ Then you will need to grant access to your Spotify Account.
 After that just play any song on any device and then run the script. It will grab the lyrics for that specific song. 
 Enjoy :)
 
-# Disclaimer:
+# Disclaimer
 This script only looks at your currently playing Spotify song and you can revoke its acess any time at spotify.com/account
 
 
