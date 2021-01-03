@@ -21,7 +21,7 @@ pip install lyricsgenius
 ```
 
 # API key requirement
-You can retrieve the sign up for Spotify API key at [https://developer.spotify.com/](https://developer.spotify.com/)   
+You can sign up for Spotify Developer Account and get your Spotify API key at [https://developer.spotify.com/](https://developer.spotify.com/)   
 and Genius token at [https://genius.com/api-clients](https://genius.com/api-clients).
 
 Alternatively, you can contact me to get the API keys.  
