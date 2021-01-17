@@ -1,26 +1,19 @@
-#Config file
-import config
+# Project name: Lyrics-scraper by Dat Phan
+# Last update: Jan 16, 2021
 
-#Spotipy import
+import os
+import time
+import config
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-
-#LyricGenius import + token key
 import lyricsgenius
-genius = lyricsgenius.Genius(config.genius_token)
 
-# OS Access for clearing output
-import os
-#Object creation with authentication
+#Lyricsgenius and Spotipy creation with secret tokens
+genius = lyricsgenius.Genius(config.genius_token)
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=config.client_id,
                                                client_secret=config.client_secret,
                                                redirect_uri="http://localhost:8888/callback",
                                                scope="user-read-playback-state"))
-
-#Get currently playing song info via Spotify API
-result = sp.current_user_playing_track()
-track = result["item"]["name"]
-artists = result["item"]["artists"][0]["name"]
 
 intro = """
 =======================================================================================================
@@ -31,23 +24,47 @@ intro = """
 ███████╗██║   ██║  ██║██║╚██████╗███████║    ███████║╚██████╗██║  ██║██║  ██║██║     ███████╗██║  ██║
 ╚══════╝╚═╝   ╚═╝  ╚═╝╚═╝ ╚═════╝╚══════╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝                                                                                          
 
-                                                                                            by Dat Phan 
+                                                                                            by Dat Phan
+                                                                  created with Spotipy and GeniusLyrics
 =======================================================================================================
 """
-os.system('cls')
-print(intro)
-print("Currently playing:", track, "-" , artists)
 
-noft = track.split('(')[0] #In song names, the featuring artist seems to break Genius API so this removes it
 
-#Use Genius API to fetch lyrics
-lyrics = []
-songs = genius.search_songs(str(noft) + artists)
-url = songs['hits'][0]['result']['url']
-#print(url)
-song_lyrics = genius.lyrics(url)
-lyrics.append(song_lyrics)
+#Retrieve the currently playing song and device info from Spotify
+def getPlaybackInfo():
+    result = sp.current_playback()
+    track = result["item"]["name"]
+    artist = result["item"]["artists"][0]["name"]
+    d_name = result["device"]["name"]
+    d_type = result["device"]["type"]
+    return track,artist,d_name,d_type
 
-#Output the lyrics
-for line in lyrics:
-    print(str(line))
+#Get the lyrics from Genius API via lyricsGenius
+def getLyrics(track,artist):
+    song = genius.search_song(track,artist)
+    return song.lyrics
+
+def main():
+    os.system('cls')
+    print(intro)
+
+    #Storing the results in these 4 variables
+    track, artist, d_name, d_type = getPlaybackInfo()
+    
+    #Output song info
+    print("Currently playing " + track + " by " + artist + " on " + d_name + " (" + d_type + ") ")
+
+    lyrics = getLyrics(track,artist)
+
+    #Split lyrics into array 
+    lyrics_arr = lyrics.split("\n\n")
+
+    #Output 1 part at a time to not overwhelm user
+    for part in lyrics_arr:
+        print(part)
+        print("\n\n")
+        time.sleep(8)
+
+
+if __name__ == "__main__":
+    main()
