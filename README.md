@@ -40,7 +40,7 @@ After that just play any song on any device and then run the script.
 It will grab the lyrics for currently playing song.  
 
 Snippet of output:  
-![image](https://user-images.githubusercontent.com/29266892/103489411-5c372e80-4de2-11eb-84ce-4bc4dc342353.png)
+![image](https://user-images.githubusercontent.com/29266892/104829597-56f6cc80-5843-11eb-8c9d-761f2ebc2f35.png)
 
 
 Enjoy :)
