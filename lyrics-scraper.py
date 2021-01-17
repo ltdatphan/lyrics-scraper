@@ -54,16 +54,19 @@ def main():
     #Output song info
     print("Currently playing " + track + " by " + artist + " on " + d_name + " (" + d_type + ") ")
 
-    lyrics = getLyrics(track,artist)
+    try:
+        lyrics = getLyrics(track,artist)
 
-    #Split lyrics into array 
-    lyrics_arr = lyrics.split("\n\n")
+        #Split lyrics into array 
+        lyrics_arr = lyrics.split("\n\n")
 
-    #Output 1 part at a time to not overwhelm user
-    for part in lyrics_arr:
-        print(part)
-        print("\n\n")
-        time.sleep(8)
+        #Output 1 part at a time to not overwhelm user
+        for part in lyrics_arr:
+            print(part)
+            print("\n\n")
+            time.sleep(8)
+    except:
+        print("No lyrics found!")
 
 
 if __name__ == "__main__":
