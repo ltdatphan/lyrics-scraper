@@ -20,15 +20,29 @@ Then install LyricsGenius via `pip`.
 pip install lyricsgenius
 ```
 
+# API key requirement
+You can sign up for Spotify Developer Account and get your Spotify API key at [https://developer.spotify.com/](https://developer.spotify.com/)   
+and Genius token at [https://genius.com/api-clients](https://genius.com/api-clients).
+
+Alternatively, you can contact me to get the API keys.  
+
+Then you can replace the variables `config.client_id, config.client_secret, config.genius_token` with the keys.  
 
 # Usage
 You run the script using:
 ```
 python lyrics-scraper.py
 ```
-If you're running it for the first time, it will open a new browswer tab and prompt you to log in.
-Then you will need to grant access to your Spotify Account. 
-After that just play any song on any device and then run the script. It will grab the lyrics for that specific song.  
+If you're running it for the first time, it will open a new browswer tab and prompt you to log in.  
+Then you will need to grant access to your Spotify Account.   
+![image](https://user-images.githubusercontent.com/29266892/103489349-f64aa700-4de1-11eb-974b-fde64e3e782f.png)  
+After that just play any song on any device and then run the script. 
+It will grab the lyrics for currently playing song.  
+
+Snippet of output:  
+![image](https://user-images.githubusercontent.com/29266892/103489411-5c372e80-4de2-11eb-84ce-4bc4dc342353.png)
+
+
 Enjoy :)
 
 # Disclaimer
