@@ -5,8 +5,9 @@ Want a useful tool that helps you find the lyrics to your favorite songs? Lyrics
 A python program that finds the lyrics of the song that is currently being played on user's Spotify's account. Version 2.0 now supports a user-friendly GUI!  
 
 # Installation
-This project was made using [Spotipy](https://github.com/plamere/spotipy) and [LyricsGenius](https://github.com/johnwmillr/LyricsGenius)
-.  Please refer to the installation guides.
+This project was made using [Spotipy](https://github.com/plamere/spotipy) and [LyricsGenius](https://github.com/johnwmillr/LyricsGenius).  
+GUI component was made using [TkInter](https://docs.python.org/3/library/tkinter.html). Please make sure you have a recent version of Python!  
+Refer to the installation guides provided by these links if you have any issues.  
 
 #### Quick guide:
 First install Spotipy via `pip`
