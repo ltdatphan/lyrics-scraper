@@ -1,5 +1,5 @@
 from requests.api import get
-from assets.functions.lyrics_scraper import *
+from assets.functions.lyric_scraper import *
 import tkinter as tk
 from tkinter import scrolledtext
 
