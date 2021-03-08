@@ -44,8 +44,9 @@ Then you will need to grant access to your Spotify Account.
 
 ![image](https://user-images.githubusercontent.com/29266892/103489349-f64aa700-4de1-11eb-974b-fde64e3e782f.png)  
 After that you can close the browser tab and navigate back to the application. 
-It will grab the lyrics for whatever song you are playing on Spotify.
+Play a song on Spotify and it will grab the lyrics!  
 
+Here I played The Middle by Zedd.  
 Snippet of output:  
 ![image](https://user-images.githubusercontent.com/29266892/110263405-8e9d0d80-7f84-11eb-8c78-c1b42e3fc816.png)
 
