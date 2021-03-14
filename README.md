@@ -67,7 +67,8 @@ As you can see, it displayed:
 
 ### New feature!
 Want to share lyrics with your friends? The 'Copy to clipboard' feature can help you with that!
-![image](https://user-images.githubusercontent.com/29266892/111088113-f52da880-84fb-11eb-8e63-545d8542e004.png)
+![image](https://user-images.githubusercontent.com/29266892/111088113-f52da880-84fb-11eb-8e63-545d8542e004.png)  
+  
 It will give you a warning that your clipboard content was cleared before the lyrics were pasted.
 
 Enjoy :)
