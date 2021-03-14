@@ -9,25 +9,31 @@ def fetch_playback():
     try:
         song, artist, d_name, d_type = get_playback_info() #Get the live data of user's Spotify session
 
-        lyrics = get_lyrics(song,artist) #Query the lyrics using song + artist info
+        try:
+            lyrics = get_lyrics(song,artist) #Query the lyrics using song + artist info
+            text_area.configure(state ='normal') #Unlock text area to make edits
+            text_area.delete('1.0','end')
+            text_area.insert(tk.INSERT, lyrics)
+            text_area.configure(state ='disabled') #Lock text area (or make it READ ONLY)
+            #Update the labels to display info retrieved from Spotify
+            combined_song_info = f'Playing: {song} by {artist}'
+            currSong_lbl.config(text=combined_song_info)
 
-        text_area.configure(state ='normal') #Unlock text area to make edits
-        text_area.delete('1.0','end')
-        text_area.insert(tk.INSERT, lyrics)
-        text_area.configure(state ='disabled') #Lock text area (or make it READ ONLY)
+            combined_device_info = f'on {d_name} ({d_type})'
+            device_lbl.config(text=combined_device_info)
+        except: #Handle error when Genius API call fails
+            text_area.configure(state ='normal') 
+            text_area.delete('1.0','end')
+            text_area.insert(tk.INSERT, 'Cannot retrieve lyrics from Genius!')
+            text_area.configure(state ='disabled')
 
-    except: #Handle error when we can't find lyrics
+    except: #Handle error when Spotify API call fails
         text_area.configure(state ='normal') 
         text_area.delete('1.0','end')
-        text_area.insert(tk.INSERT, 'Lyrics not found!')
+        text_area.insert(tk.INSERT, 'Cannot retrieve playback data from Spotify! Note that you need to be actively playing a song on Spotify for this program to work!')
         text_area.configure(state ='disabled') 
     
-    #Update the labels to display info retrieved from Spotify
-    combined_song_info = f'Playing: {song} by {artist}'
-    currSong_lbl.config(text=combined_song_info)
-
-    combined_device_info = f'on {d_name} ({d_type})'
-    device_lbl.config(text=combined_device_info)
+    
 
 
 #Create the window and size
